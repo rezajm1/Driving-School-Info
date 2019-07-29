@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "369563399710",
+    "firebase_url": "https://drivingschoolinfo-dd44b.firebaseio.com",
+    "project_id": "drivingschoolinfo-dd44b",
+    "storage_bucket": "drivingschoolinfo-dd44b.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:369563399710:android:bcf1cced640b62ea",
+        "android_client_info": {
+          "package_name": "com.ta.drivingschoolinfo"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "369563399710-5tgv3qm5cqev7n3vek1t4lfhkk9v433m.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.ta.drivingschoolinfo",
+            "certificate_hash": "c04cb27c4298a7b3153b01efbadb3bf5ccc74035"
+          }
+        },
+        {
+          "client_id": "369563399710-3ulsu2tlbvaqur0lg007548t789foba5.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAQlGCkfaTAYPswnAueDPcu0c5BH7uul8E"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "369563399710-3ulsu2tlbvaqur0lg007548t789foba5.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
