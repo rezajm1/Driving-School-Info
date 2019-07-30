@@ -9,40 +9,77 @@ import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ProgressBar;
+import android.widget.Toast;
+
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
+import com.google.firebase.storage.StorageReference;
 import com.ta.drivingschoolinfo.Adapter.adapter_home;
-import com.ta.drivingschoolinfo.Model.model_home;
 import com.ta.drivingschoolinfo.R;
+import com.ta.drivingschoolinfo.upload;
+
 import java.util.ArrayList;
+import java.util.List;
 
 
 
 public class fragment_home extends Fragment {
-    private RecyclerView recyclerView;
-    private adapter_home adapter;
-    private ArrayList<model_home> homeArrayList;
+    private RecyclerView recyclerView2;
+    private adapter_home mAdapter;
+    private ProgressBar mProgressCircle;
 
-    public fragment_home(){
+    private StorageReference mStorageRef;
+    private DatabaseReference mDatabaseRef;
+    private List<upload> mUploads;
 
+    public fragment_home() {
+        // Required empty public constructor
     }
 
     @Nullable
     @Override
-
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container,
                              @Nullable Bundle savedInstanceState) {
-        return inflater.inflate(R.layout.fragment_fragment_home, container, false);
+
+        View view = inflater.inflate(R.layout.fragment_fragment_home, container, false);
+
+        mProgressCircle = (ProgressBar) view.findViewById(R.id.progress_circle);
+        recyclerView2 = view.findViewById(R.id.recycler_view);
+        recyclerView2.setLayoutManager(new LinearLayoutManager(getActivity()));
+        recyclerView2.setHasFixedSize(true);
 
 
+        mDatabaseRef = FirebaseDatabase.getInstance().getReference("Photo");
 
+        return view;
     }
+    public void onStart()
+    {
+        super.onStart();
+        mDatabaseRef.addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+                mUploads = new ArrayList<>();
+                for (DataSnapshot postSnapshot : dataSnapshot.getChildren()) {
+                    upload upload = postSnapshot.getValue(upload.class);
+                    mUploads.add(upload);
+                }
+                mAdapter = new adapter_home(getActivity(), mUploads);
+                recyclerView2.setAdapter(mAdapter);
 
 
-   public void addData(){
-        homeArrayList = new ArrayList<>();
-        homeArrayList.add(new model_home("Dimas Maulana", "1414370309", "asdas"));
-        homeArrayList.add(new model_home("Fadly Yonk", "1214234560", "987654321"));
-        homeArrayList.add(new model_home("Ariyandi Nugraha", "1214230345", "987648765"));
-        homeArrayList.add(new model_home("Aham Siswana", "1214378098", "098758124"));
+                mProgressCircle.setVisibility(View.INVISIBLE);
+            }
+            @Override
+            public void onCancelled(@NonNull DatabaseError databaseError) {
+                Toast.makeText(getContext(), databaseError.getMessage(),Toast.LENGTH_SHORT).show();
+                mProgressCircle.setVisibility(View.INVISIBLE);
+            }
+        });
     }
 
 }
