@@ -49,10 +49,10 @@ public class AdminActivity extends AppCompatActivity {
     private Button mpilihgambar;
     private Button muploadgambar;
     private TextView mlihathasilgambar;
-    private EditText medittextnamalengkap;
-    private EditText meditusia;
+    private EditText medittextnamakursus;
+    private EditText meditnotel;
     private EditText meditalamatlengkap;
-    private ImageView mphotodiri;
+    private ImageView mphotokursus;
     private ProgressBar mProgressBar;
     private Uri mGambarUri;
 
@@ -67,10 +67,10 @@ public class AdminActivity extends AppCompatActivity {
         setContentView(R.layout.activity_admin);
         Button mpilihgambar = findViewById(R.id.pilihgambar);
         Button muploadgambar = findViewById(R.id.uploadgambar);
-        mphotodiri = (ImageView) findViewById(R.id.mphotodiri);
+        mphotokursus = (ImageView) findViewById(R.id.mphotokursus);
 
-        medittextnamalengkap = (EditText) findViewById(R.id.editText);
-        meditusia = (EditText) findViewById(R.id.editText2);
+        medittextnamakursus = (EditText) findViewById(R.id.editText);
+        meditnotel = (EditText) findViewById(R.id.editText2);
         meditalamatlengkap = (EditText) findViewById(R.id.editText4);
         mProgressBar = (ProgressBar) findViewById(R.id.progressBar);
 
@@ -132,7 +132,7 @@ public class AdminActivity extends AppCompatActivity {
         if (requestCode == pilih_gambar && resultCode == Activity.RESULT_OK
                 && data != null && data.getData() != null) {
             mGambarUri = data.getData();
-            Picasso.get().load(mGambarUri).fit().into(mphotodiri);
+            Picasso.get().load(mGambarUri).fit().into(mphotokursus);
         }
     }
 
@@ -167,8 +167,8 @@ public class AdminActivity extends AppCompatActivity {
                             }, 500);
 
                             Toast.makeText(AdminActivity.this, "Upload successful", Toast.LENGTH_LONG).show();
-                            upload upload = new upload(medittextnamalengkap.getText().toString(),
-                                    meditusia.getText().toString(),
+                            upload upload = new upload(medittextnamakursus.getText().toString(),
+                                    meditnotel.getText().toString(),
                                     meditalamatlengkap.getText().toString(),
                                     downloadurl.toString());
                             String uploadId = mDatabaseRef.push().getKey();
