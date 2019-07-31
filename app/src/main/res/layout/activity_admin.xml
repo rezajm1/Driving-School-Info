@@ -5,6 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
+    android:background="#FEDC42"
     tools:context=".AdminActivity">
 
 
@@ -27,11 +28,11 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
+        android:fontFamily="@fonts/volatire.ttf"
         android:text="Tambah Data Kursus"
         android:textColor="#000"
         android:textSize="25sp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/sign_out" />
+        />
 
     <TextView
         android:id="@+id/textView3"
@@ -39,6 +40,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="24dp"
         android:layout_marginTop="8dp"
+        android:fontFamily="@fonts/volatire.ttf"
         android:text="Nama Kursus"
         android:textColor="#000"
         android:textSize="20sp"
@@ -63,7 +65,7 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="20dp"
             android:layout_marginTop="8dp"
-
+            android:fontFamily="@fonts/volatire.ttf"
             android:text="No Telepon Kursus"
             android:textColor="#000"
             android:textSize="20sp"
@@ -89,7 +91,7 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="20dp"
             android:layout_marginTop="16dp"
-
+            android:fontFamily="@fonts/volatire.ttf"
             android:text="Alamat Lengkap Kursus"
             android:textColor="#000"
             android:textSize="20sp"
@@ -117,7 +119,7 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="20dp"
             android:layout_marginTop="16dp"
-
+            android:fontFamily="@fonts/volatire.ttf"
             android:text="Photo Kursus"
             android:textColor="#000"
             android:textSize="20sp"

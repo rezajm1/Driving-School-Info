@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FEDC42"
+    android:orientation="vertical"
+    tools:context=".KontakActivity">
+
+    <TextView
+        android:id="@+id/textView8"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="150dp"
+        android:layout_marginLeft="50dp"
+        android:layout_marginRight="50dp"
+        android:layout_marginBottom="10dp"
+        android:textSize="15sp"
+        android:textColor="#000"
+        android:fontFamily="@fonts/volatire.ttf"
+        android:text="Silakan Daftarkan tempat kursus anda ke e-mail kami,dengan format:" />
+
+    <TextView
+        android:id="@+id/textView9"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="50dp"
+        android:layout_marginRight="50dp"
+        android:layout_marginBottom="10dp"
+        android:textSize="15sp"
+        android:textColor="#000"
+        android:fontFamily="@fonts/volatire.ttf"
+        android:text="Nama Kursus:" />
+
+    <TextView
+        android:id="@+id/textView10"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="50dp"
+        android:layout_marginRight="50dp"
+        android:layout_marginBottom="10dp"
+        android:textSize="15sp"
+        android:textColor="#000"
+        android:fontFamily="@fonts/volatire.ttf"
+        android:text="Nomor Telepon:" />
+
+    <TextView
+        android:id="@+id/textView12"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="50dp"
+        android:layout_marginRight="50dp"
+        android:layout_marginBottom="10dp"
+        android:textSize="15sp"
+        android:textColor="#000"
+        android:fontFamily="@fonts/volatire.ttf"
+        android:text="Alamat Lengkap:" />
+
+    <TextView
+        android:id="@+id/textView14"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="50dp"
+        android:layout_marginRight="50dp"
+        android:layout_marginBottom="10dp"
+        android:textSize="15sp"
+        android:textColor="#000"
+        android:fontFamily="@fonts/volatire.ttf"
+        android:text="Kirim email ke rezajm19@gmail.com" />
+
+    <TextView
+        android:id="@+id/textView16"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="50dp"
+        android:layout_marginRight="50dp"
+        android:layout_marginBottom="10dp"
+        android:textSize="15sp"
+        android:textColor="#000"
+        android:fontFamily="@fonts/volatire.ttf"
+        android:text="Terimakasih :)" />
+
+
+</LinearLayout>

@@ -1,6 +1,7 @@
 package com.ta.drivingschoolinfo.Adapter;
 
 import android.content.Context;
+import android.content.Intent;
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.RecyclerView.Adapter;
 import android.view.LayoutInflater;
@@ -12,6 +13,7 @@ import android.widget.TextView;
 import android.widget.Filter;
 import android.widget.Filterable;
 
+import com.ta.drivingschoolinfo.PostDetailActivity;
 import com.ta.drivingschoolinfo.R;
 
 import com.ta.drivingschoolinfo.upload;
@@ -68,6 +70,21 @@ public class adapter_home extends RecyclerView.Adapter<adapter_home.ImageViewHol
             textViewNotel = itemView.findViewById(R.id.text_view_notel);
             textViewAlamat = itemView.findViewById(R.id.text_view_alamat);
             imageView = itemView.findViewById(R.id.image_view_upload);
+
+            itemView.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    Intent postdetailactivity = new Intent(mContext, PostDetailActivity.class);
+                    int position = getAdapterPosition();
+
+                    postdetailactivity.putExtra("imageView",mUploads.get(position).getGambarUrl());
+                    postdetailactivity.putExtra("textViewNamakursus",mUploads.get(position).getmNamakursus());
+                    postdetailactivity.putExtra("textViewNotel",mUploads.get(position).getmNotel());
+                    postdetailactivity.putExtra("textViewAlamat",mUploads.get(position).getmAlamat());
+
+                    mContext.startActivity(postdetailactivity);
+                }
+            });
 
         }
 

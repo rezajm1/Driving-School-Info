@@ -13,7 +13,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_above="@+id/btm_nav"
-        android:background="#FFD4AA"
+        android:background="#FEDC42"
         android:layout_alignParentStart="true"
         >
 

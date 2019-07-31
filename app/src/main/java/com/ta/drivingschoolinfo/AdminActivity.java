@@ -4,6 +4,7 @@ package com.ta.drivingschoolinfo;
 import android.app.Activity;
 import android.content.ContentResolver;
 import android.content.Intent;
+import android.graphics.Typeface;
 import android.net.Uri;
 import android.os.Bundle;
 import android.os.Handler;
@@ -40,7 +41,7 @@ import com.google.firebase.storage.UploadTask;
 import com.squareup.picasso.Picasso;
 
 public class AdminActivity extends AppCompatActivity {
-
+    TextView TextView,TextView3,TextView4,TextView5,TextView6;
     Button btnLogOut;
     FirebaseAuth firebaseAuth;
     private FirebaseAuth.AuthStateListener authStateListener;
@@ -111,7 +112,17 @@ public class AdminActivity extends AppCompatActivity {
 
             }
         });
-
+        TextView=(TextView)findViewById(R.id.textView);
+        TextView3=(TextView)findViewById(R.id.textView3);
+        TextView4=(TextView)findViewById(R.id.textView4);
+        TextView5=(TextView)findViewById(R.id.textView5);
+        TextView6=(TextView)findViewById(R.id.textView6);
+        Typeface customfont=Typeface.createFromAsset(getAssets(),"fonts/volatire.ttf");
+        TextView.setTypeface(customfont);
+        TextView3.setTypeface(customfont);
+        TextView4.setTypeface(customfont);
+        TextView5.setTypeface(customfont);
+        TextView6.setTypeface(customfont);
 
 
     }

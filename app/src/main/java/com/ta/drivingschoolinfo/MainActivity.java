@@ -28,10 +28,8 @@ public class MainActivity extends AppCompatActivity {
             }
         },waktu_loading);
 
-        textlogo=(TextView)findViewById(R.id.textlogo);
-        Typeface customfont=Typeface.createFromAsset(getAssets(),"fonts/streatwear.otf");
-        textlogo.setTypeface(customfont);
-        ;
+
+
     }
     }
 

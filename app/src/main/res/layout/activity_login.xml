@@ -16,6 +16,17 @@
         android:padding="@dimen/activity_horizontal_margin">
 
 
+        <TextView
+            android:id="@+id/textadmin"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:fontFamily="@fonts/slimjim.ttf"
+            android:textSize="25dp"
+            android:textColor="@color/cardview_light_background"
+            android:text="ADMIN LOGIN" />
+
         <ImageView
             android:layout_width="92dp"
             android:layout_height="83dp"
@@ -60,9 +71,18 @@
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="20dip"
-            android:background="#FFD4AA"
+            android:background="#FEDC42"
             android:text="@string/btn_login"
             android:textColor="@android:color/black" />
+
+        <TextView
+            android:id="@+id/textbelum"
+            android:layout_marginTop="20dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="register"
+            android:textColor="#ffff"
+            android:text="Mau Daftarkan Tempat Anda? KLIK DISINI" />
 
         <!-- Link to Login Screen -->
 

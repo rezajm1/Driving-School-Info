@@ -1,5 +1,6 @@
 package com.ta.drivingschoolinfo;
 
+import android.graphics.Typeface;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
@@ -16,6 +17,7 @@ import android.text.TextUtils;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ProgressBar;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.google.android.gms.tasks.OnCompleteListener;
@@ -26,6 +28,7 @@ import com.google.firebase.auth.FirebaseAuth;
 public class LoginActivity extends AppCompatActivity {
 
     private EditText inputEmail, inputPassword;
+    TextView textadmin;
     private FirebaseAuth auth;
     private ProgressBar progressBar;
     private Button btnLogin ;
@@ -103,9 +106,17 @@ public class LoginActivity extends AppCompatActivity {
         });
 
 //END KODE UTAMA
+        textadmin=(TextView)findViewById(R.id.textadmin);
+        Typeface customfont=Typeface.createFromAsset(getAssets(),"fonts/slimjim.ttf");
+        textadmin.setTypeface(customfont);
 
-//FLOATING BAR DEFAULT
+
 
     }
 
+    public void register(View view) {
+        Intent intent;
+        intent = new Intent(this, KontakActivity.class);
+        startActivity(intent);
+    }
 }
